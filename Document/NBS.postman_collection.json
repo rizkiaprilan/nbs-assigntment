@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "79bdd10c-ca16-48b4-bf2a-5ad870ab751f",
+		"name": "NBS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullname\": \"rizki aprilan\",\r\n    \"email\": \"riskiazza@gmail.com\",\r\n    \"password\": \"1234567890\",\r\n    \"confirmPassword\": \"1234567890\",\r\n    \"phone\": \"082170725072\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/register",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verification Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/account/activated/:token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"account",
+						"activated",
+						":token"
+					],
+					"variable": [
+						{
+							"key": "token",
+							"value": "cmlza2lhenphQGdtYWlsLmNvbSYxNjE2ODMxMDg1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resend Email Verification",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/send/email-verification/:email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"send",
+						"email-verification",
+						":email"
+					],
+					"variable": [
+						{
+							"key": "email",
+							"value": "riskiazza@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resend Forget Password",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/send/forget-password/:email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"send",
+						"forget-password",
+						":email"
+					],
+					"variable": [
+						{
+							"key": "email",
+							"value": "riskiazza@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forget Password",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"newPassword\": \"11223344556677889900\",\r\n    \"newConfirmPassword\": \"11223344556677889900\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/account/forget-password/:token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"account",
+						"forget-password",
+						":token"
+					],
+					"variable": [
+						{
+							"key": "token",
+							"value": "cmlza2lhenphQGdtYWlsLmNvbSYxNjE2OTEwNDQx"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"riskiazza@gmail.com\",\r\n    \"password\":\"11223344556677889900\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List Employee Performance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpc2tpYXp6YUBnbWFpbC5jb20iLCJpZCI6ImQyOWM1MWEzLTdhYmItNDM5OS1hMzYwLTMyMDQzYjE1M2YzYyIsImlzQWRtaW4iOnRydWV9.DqTIDEXxeVz8ycCJxLyGwum5qo4AXEwJjyf2FNlbOgQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/list-employee-performance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"list-employee-performance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

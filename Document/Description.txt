@@ -1,0 +1,14 @@
+Description:
+
+Sebagai Karyawan dan Admin:
+1. saat Karyawan dan Admin melakukan login maka secara otomatis akan mengenerate score dan menkalkulasi dengan score yang sudah didapat sebelumnya.
+2. jika Karyawan dan Admin belum mempunya akun, user dapat melakukan registrasi. kemudian akan mendapatkan email verifikasi.
+3. jika Karyawan dan Admin lupa password, user dapat melakukan forget password. kemudia mendapatkan email verifikasi forget password
+
+Sebagai Admin:
+1. dapat melihat semua score karyawan
+
+Penentuan Score:
+1. dari jam 06:00 s/d jam 07:00 = 3 point
+2. dari jam 07:01 s/d jam 08:00 = 2 point
+3. dari jam 08:01 s/d jam 09:00 = 1 point
