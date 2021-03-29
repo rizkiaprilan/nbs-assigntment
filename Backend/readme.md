@@ -8,7 +8,7 @@ go run app/Server.go
 
 
 =====================================================
-ENV
+create .env 
 
 PORT = 9000
 BCRYPT_COST = 12
